@@ -14,7 +14,7 @@ const cookieSession = require('cookie-session');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-router.get('/token', (req, res, next) => {
+router.get('/', (req, res, next) => {
   if (req.cookies.token) {
     res.status(200);
     res.send(true);
@@ -25,7 +25,7 @@ router.get('/token', (req, res, next) => {
   }
 });
 
-router.post('/token', (req, res, next) => {
+router.post('/', (req, res, next) => {
   knex('users')
     .where('email', req.body.email)
     .then((users) => {
@@ -52,7 +52,7 @@ router.post('/token', (req, res, next) => {
     })
 })
 
-router.delete('/token', function(req, res, next) {
+router.delete('/', function(req, res, next) {
   res.clearCookie('token');
   res.status(200);
   res.send(true);

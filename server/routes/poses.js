@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
         });
 });
 
-// router.get('/poses/:id', (req, res, next) => {
+// router.get('/:id', (req, res, next) => {
 //     knex('yogapp')
 //         .orderBy('id', req.params.id)
 //         .then((poses) => {
@@ -30,7 +30,7 @@ router.get('/', (req, res, next) => {
 //         });
 // });
 //
-// router.post('/poses', (req, res, next) => {
+// router.post('/', (req, res, next) => {
 //     knex('yogapp')
 //         .then((poses) => {
 //             if (!poses) {
@@ -58,7 +58,7 @@ router.get('/', (req, res, next) => {
 //         });
 // });
 //
-// router.patch('/poses/:id', (req, res, next) => {
+// router.patch('/:id', (req, res, next) => {
 //     knex('yogapp')
 //         .where('id', req.params.id)
 //         .update({
@@ -76,7 +76,7 @@ router.get('/', (req, res, next) => {
 //         })
 // });
 
-// router.delete('/poses/:id', (req, res, next) => {
+// router.delete('/:id', (req, res, next) => {
 //     let pose;
 //
 //     knex('yogapp')

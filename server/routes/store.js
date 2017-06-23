@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const boom = require('boom')
 
-router.get('/store', (req, res, next) => {
+router.get('/', (req, res, next) => {
     knex('store')
         .orderBy('id')
         .then((item) => {
@@ -23,7 +23,7 @@ router.get('/store', (req, res, next) => {
         });
 });
 
-router.get('/store', (req, res, next) => {
+router.get('/', (req, res, next) => {
     // if (!req.cookies.token) {
     //     return next(boom.create(401, 'Unauthorized'))
     // } else {
@@ -35,7 +35,7 @@ router.get('/store', (req, res, next) => {
     // }
 });
 
-router.get('/store/check', (req, res, next) => {
+// router.get('/store/check', (req, res, next) => {
     // if (!req.cookies.token) {
     //     return next(boom.create(401, 'Unauthorized'));
     // } else {
@@ -50,9 +50,9 @@ router.get('/store/check', (req, res, next) => {
     //             }
     //         })
     // }
-});
+// });
 
-router.post('/store', (req, res, next) => {
+router.post('/', (req, res, next) => {
     // if (!req.cookies.token) {
     //     return next(boom.create(401, 'Unauthorized'))
     // }
@@ -71,7 +71,7 @@ router.post('/store', (req, res, next) => {
     //     );
 });
 
-router.delete('/store', (req, res, next) => {
+router.delete('/', (req, res, next) => {
   //   if (!req.cookies.token) {
   //       return next(boom.create(401, 'Unauthorized'))
   //   }

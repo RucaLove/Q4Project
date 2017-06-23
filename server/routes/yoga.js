@@ -7,7 +7,7 @@ const router = express.Router();
 const knex = require('../knex');
 const humps = require('humps');
 
-router.get('/yoga', (req, res, next) => {
+router.get('/', (req, res, next) => {
   console.log("in yoga");
   res.send({"a": "yes"});
 });

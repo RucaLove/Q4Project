@@ -11,7 +11,6 @@ class App extends Component {
       return res.text()
     })
     .then(pose => {
-      console.log("HAYYYY", pose);
     })
   }
   render() {

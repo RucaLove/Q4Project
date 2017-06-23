@@ -7,7 +7,7 @@ const router = express.Router();
 const knex = require('../knex');
 const humps = require('humps');
 
-router.get('/users', (req, res, next) => {
+router.get('/', (req, res, next) => {
     knex('users')
         .orderBy('id')
         .then((users) => {
